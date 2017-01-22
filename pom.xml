@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>guava-learning</module>
+        <module>pattern-learning</module>
     </modules>
 
     <properties>
