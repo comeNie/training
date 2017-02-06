@@ -15,7 +15,7 @@ public abstract class Observable<S extends Observable<S, O, A>, O extends Observ
     protected List<O> observers;
 
     public Observable() {
-        this.observers = new CopyOnWriteArrayList<>();
+        this.observers = new CopyOnWriteArrayList<O>();
     }
 
     public void addObserver(O observer) {
