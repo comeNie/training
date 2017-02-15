@@ -11,6 +11,8 @@
     <modules>
         <module>guava-learning</module>
         <module>pattern-learning</module>
+        <module>spring-boot</module>
+        <module>image-service</module>
     </modules>
 
     <properties>

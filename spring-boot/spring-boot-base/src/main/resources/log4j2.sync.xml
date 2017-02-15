@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30" verbose="true" strict="true">
+  <Properties>
+	  <Property name="contextName">spring-boot</Property>
+	  <Property name="project.build.directory">d:/</Property>
+	  <Property name="ctx:logger.host">learn</Property>
+  </Properties>
+  
+  <Appenders>
+    <Console name="STDOUT">
+    	<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+        <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+      <PatternLayout>
+      	<Pattern>%date [${contextName}] %level [%thread] %logger [%file:%line] - %msg%n</Pattern>
+      </PatternLayout>
+    </Console>
+    
+    <RollingRandomAccessFile name="ROLLING" fileName="${project.build.directory}/logs/${contextName}-${ctx:logger.host}.log"
+                 filePattern="${project.build.directory}/logs/${contextName}-${ctx:logger.host}.%d{yyyy-MM-dd}.%i.log.gz">
+      <PatternLayout>
+        <Pattern>%date [${contextName}] %level [%thread] %logger [%file:%line] - %msg%n</Pattern>
+      </PatternLayout>
+ 	  <!-- daily rollover -->
+      <Policies>
+	    <OnStartupTriggeringPolicy />
+	    <SizeBasedTriggeringPolicy size="50 MB" />
+	    <TimeBasedTriggeringPolicy />
+	    <!--
+	    <TimeBasedTriggeringPolicy  interval="6" modulate="true" />
+	    -->
+	  </Policies>
+	  <!-- keep 14 days' worth of history -->
+	  <DefaultRolloverStrategy max="14"/>
+    </RollingRandomAccessFile>
+
+  </Appenders>
+  
+  <Loggers>
+	<!-- Spring -->
+	<logger name="org.springframework" level="DEBUG" />
+	<!-- Hibernate -->
+	<logger name="org.hibernate" level="DEBUG" />
+	<!-- MyBatis -->
+	<logger name="org.apache.ibatis" level="DEBUG" />
+	<logger name="org.mybatis" level="DEBUG" />
+
+    <Root level="INFO">
+      <AppenderRef ref="STDOUT" />
+      <AppenderRef ref="ROLLING" />
+    </Root>
+  </Loggers>
+</Configuration>
