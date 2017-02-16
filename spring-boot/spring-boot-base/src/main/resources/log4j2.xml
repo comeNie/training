@@ -15,7 +15,7 @@
       </PatternLayout>
     </Console>
     
-    <RollingRandomAccessFile name="ROLLING" fileName="${project.build.directory}/logs/${contextName}-${ctx:logger.host}.log"
+    <RollingRandomAccessFile name="ROLLING" fileName="${project.build.directory}/logs/${contextName}-$${ctx:logger.host}.log"
                  filePattern="${project.build.directory}/logs/${contextName}-${ctx:logger.host}.%d{yyyy-MM-dd}.%i.log.gz" 
                  immediateFlush="false">
       <PatternLayout>

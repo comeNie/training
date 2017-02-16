@@ -10,6 +10,7 @@
     <modules>
         <module>spring-boot-startup</module>
         <module>spring-boot-base</module>
+        <module>spring-boot-springApplication</module>
     </modules>
 
     <parent>
