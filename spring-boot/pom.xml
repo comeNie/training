@@ -13,6 +13,7 @@
         <module>spring-boot-springApplication</module>
         <module>spring-boot-aop</module>
         <module>spring-boot-profile</module>
+        <module>spring-boot-cache-guava</module>
     </modules>
 
     <parent>
