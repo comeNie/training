@@ -12,6 +12,7 @@
         <module>spring-boot-base</module>
         <module>spring-boot-springApplication</module>
         <module>spring-boot-aop</module>
+        <module>spring-boot-profile</module>
     </modules>
 
     <parent>
