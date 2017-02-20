@@ -1,5 +1,7 @@
 package com.comenie.springboot.cache.controller;
 
+import com.comenie.springboot.cache.CacheApplication;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,13 +21,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by 波 on 2017/2/17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = MockServletContext.class)
+@SpringBootTest(classes = {MockServletContext.class, CacheApplication.class})
 @WebAppConfiguration
 public class CacheControllerTest {
     @Autowired
     private  CacheController controller;
 
     private MockMvc mockMvc;
+
+
 
     @Before
     public void setUp() {
@@ -48,6 +52,7 @@ public class CacheControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.post("/cache").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
         mockMvc.perform(MockMvcRequestBuilders.get("/cache").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
         mockMvc.perform(MockMvcRequestBuilders.delete("/cache").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+        mockMvc.perform(MockMvcRequestBuilders.get("/cache").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
         mockMvc.perform(MockMvcRequestBuilders.get("/cache").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
     }
 
