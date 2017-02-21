@@ -13,10 +13,12 @@
         <module>spring-boot-springApplication</module>
         <module>spring-boot-aop</module>
         <module>spring-boot-profile</module>
-        <module>spring-boot-cache-guava</module>
+        <module>spring-boot-cache</module>
         <module>spring-boot-actuator</module>
         <module>spring-boot-mail</module>
         <module>spring-boot-async</module>
+        <module>spring-boot-amqp</module>
+        <module>spring-boot-swagger</module>
     </modules>
 
     <parent>
