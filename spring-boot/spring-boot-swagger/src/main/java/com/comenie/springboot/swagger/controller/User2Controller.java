@@ -50,10 +50,10 @@ import io.swagger.annotations.ApiOperation;
  *
  *
  */
-@Api(value = "用户管理接口",description = "用户管理接口详情",tags = "用户")
+@Api(value = "用户管理接口2",description = "用户管理接口详情2",tags = "用户管理")
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/users2")
+public class User2Controller {
 
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
