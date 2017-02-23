@@ -13,6 +13,7 @@
         <module>pattern-learning</module>
         <module>spring-boot</module>
         <module>image-service</module>
+        <module>spring-cloud</module>
     </modules>
 
     <properties>
