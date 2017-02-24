@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: user-service
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:                           # 指定数据源
+    platform: h2                        # 指定数据源类型
+    schema: classpath:schema.sql        # 指定h2数据库的建表脚本
+    data: classpath:data.sql            # 指定h2数据库的数据脚本
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8762/eureka/, http://peer1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+---
+spring:
+  profiles: s1
+server:
+  port: 8081
+---
+  spring:
+    profiles: s2
+  server:
+    port: 8082

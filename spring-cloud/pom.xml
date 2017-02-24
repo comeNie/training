@@ -12,7 +12,8 @@
     <modules>
         <module>spring-cloud-core</module>
         <module>spring-cloud-eureka</module>
-        <module>spring-cloud-eureka2</module>
+        <module>spring-cloud-eureka-client</module>
+        <module>spring-cloud-eureka-consumer</module>
     </modules>
 
 
@@ -74,6 +75,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
     </dependencies>
