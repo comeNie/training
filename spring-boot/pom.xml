@@ -19,6 +19,7 @@
         <module>spring-boot-async</module>
         <module>spring-boot-amqp</module>
         <module>spring-boot-swagger</module>
+        <module>spring-boot-jpa</module>
     </modules>
 
     <parent>
