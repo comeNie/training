@@ -56,7 +56,7 @@ package come.comenie.guava.Strings;
  *  String trimAndCollapseFrom(CharSequence sequence, char replacement): 先trim在replace
  *
  *  Created by 波 on 2017/1/10.
- *
+ *  todo 编写CharMatcher测试用例
  */
 public class CharMatcherUtil {
 }
