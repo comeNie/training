@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationListener=com.comenie.springboot.springApplication.listener.ApplicationStartingListener,\
+  com.comenie.springboot.springApplication.listener.ApplicationEnvironmentPreparedListener,\
+  com.comenie.springboot.springApplication.listener.ApplicationPreparedListener,\
+  com.comenie.springboot.springApplication.listener.ApplicationReadyListener,\
+  com.comenie.springboot.springApplication.listener.ApplicationFailedListener
